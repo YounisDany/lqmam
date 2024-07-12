@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لقمة وشاي - تسجيل الجلسات</title>
+    <style>
+        body {
+            direction: rtl;
+            font-family: 'Cairo', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #6b4226;
+            color: white;
+            padding: 20px;
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #6b4226;
+            color: white;
+            border: none;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        th {
+            background-color: #6b4226;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>لقمة وشاي - تسجيل الجلسات</h1>
+    </header>
+    <form id="sessionForm">
+        <label for="sessionType">نوع الجلسة:</label>
+        <select id="sessionType">
+            <option value="عادية">عادية</option>
+            <option value="خاصة">خاصة</option>
+        </select><br>
+        <label for="sessionName">اسم الجلسة:</label>
+        <select id="sessionName">
+            <!-- إضافة 23 جلسة هنا -->
+            <option value="جلسة 1">جلسة 1</option>
+            <option value="جلسة 2">جلسة 2</option>
+            <option value="جلسة 3">جلسة 3</option>
+            <option value="جلسة 4">جلسة 4</option>
+            <option value="جلسة 5">جلسة 5</option>
+            <option value="جلسة 6">جلسة 6</option>
+            <option value="جلسة 7">جلسة 7</option>
+            <option value="جلسة 8">جلسة 8</option>
+            <option value="جلسة 9">جلسة 9</option>
+            <option value="جلسة 10">جلسة 10</option>
+            <option value="جلسة 11">جلسة 11</option>
+            <option value="جلسة 12">جلسة 12</option>
+            <option value="جلسة 13">جلسة 13</option>
+            <option value="جلسة 14">جلسة 14</option>
+            <option value="جلسة 15">جلسة 15</option>
+            <option value="جلسة 16">جلسة 16</option>
+            <option value="جلسة 17">جلسة 17</option>
+            <option value="جلسة 18">جلسة 18</option>
+            <option value="جلسة 19">جلسة 19</option>
+            <option value="جلسة 20">جلسة 20</option>
+            <option value="جلسة 21">جلسة 21</option>
+            <option value="جلسة 22">جلسة 22</option>
+            <option value="جلسة 23">جلسة 23</option>
+        </select><br>
+        <label for="minutes">عدد الدقائق:</label>
+        <input type="number" id="minutes" required><br>
+        <label for="reserverName">اسم الحاجز:</label>
+        <input type="text" id="reserverName" required><br>
+        <button type="submit">تسجيل الجلسة</button>
+    </form>
+    <h2>سجل الجلسات</h2>
+    <table id="sessionTable">
+        <thead>
+            <tr>
+                <th>نوع الجلسة</th>
+                <th>اسم الجلسة</th>
+                <th>عدد الدقائق</th>
+                <th>اسم الحاجز</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- الصفوف سيتم إضافتها هنا بواسطة JavaScript -->
+        </tbody>
+    </table>
+    <audio id="notificationSound" src="notification.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
