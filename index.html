@@ -69,8 +69,13 @@
     <form id="sessionForm">
         <label for="sessionType">نوع الجلسة:</label>
         <select id="sessionType">
-            <option value="عادية">عادية</option>
-            <option value="خاصة">خاصة</option>
+            <option value="جلسة عادية">جلسة عادية</option>
+            <option value="جلسة خاصة">جلسة خاصة</option>
+            <option value="بلاستيشن">بلاستيشن</option>
+            <option value="جاكاروا">جاكاروا</option>
+            <option value="بلوت">بلوت</option>
+            <option value="شيش">شيش</option>
+            <option value="شطرنج">شطرنج</option>
         </select><br>
         <label for="sessionName">اسم الجلسة:</label>
         <select id="sessionName">
@@ -126,8 +131,9 @@
             <!-- الصفوف سيتم إضافتها هنا بواسطة JavaScript -->
         </tbody>
     </table>
-    <h2>الجلسات المنتهية والجلسات الملغية</h2>
+    <h2>الجلسات المنتهية</h2>
     <div id="sessionEnded"></div>
+    <h2>الجلسات الملغية</h2>
     <div id="sessionCanceled"></div>
     <audio id="notificationSound" src="notification.mp3"></audio>
     <script src="script.js"></script>
