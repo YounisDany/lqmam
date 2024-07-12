@@ -50,6 +50,16 @@
             background-color: #6b4226;
             color: white;
         }
+        .btn {
+            cursor: pointer;
+        }
+        .session-ended, .session-canceled {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -64,30 +74,35 @@
         </select><br>
         <label for="sessionName">اسم الجلسة:</label>
         <select id="sessionName">
-            <!-- إضافة 23 جلسة هنا -->
-            <option value="جلسة 1">جلسة 1</option>
-            <option value="جلسة 2">جلسة 2</option>
-            <option value="جلسة 3">جلسة 3</option>
-            <option value="جلسة 4">جلسة 4</option>
-            <option value="جلسة 5">جلسة 5</option>
-            <option value="جلسة 6">جلسة 6</option>
-            <option value="جلسة 7">جلسة 7</option>
-            <option value="جلسة 8">جلسة 8</option>
-            <option value="جلسة 9">جلسة 9</option>
-            <option value="جلسة 10">جلسة 10</option>
-            <option value="جلسة 11">جلسة 11</option>
-            <option value="جلسة 12">جلسة 12</option>
-            <option value="جلسة 13">جلسة 13</option>
-            <option value="جلسة 14">جلسة 14</option>
-            <option value="جلسة 15">جلسة 15</option>
-            <option value="جلسة 16">جلسة 16</option>
-            <option value="جلسة 17">جلسة 17</option>
-            <option value="جلسة 18">جلسة 18</option>
-            <option value="جلسة 19">جلسة 19</option>
-            <option value="جلسة 20">جلسة 20</option>
-            <option value="جلسة 21">جلسة 21</option>
-            <option value="جلسة 22">جلسة 22</option>
-            <option value="جلسة 23">جلسة 23</option>
+            <!-- الجلسات العادية -->
+            <optgroup label="جلسات عادية">
+                <option value="جلسة عادية 1">جلسة عادية 1</option>
+                <option value="جلسة عادية 2">جلسة عادية 2</option>
+                <option value="جلسة عادية 3">جلسة عادية 3</option>
+                <option value="جلسة عادية 4">جلسة عادية 4</option>
+                <option value="جلسة عادية 5">جلسة عادية 5</option>
+                <option value="جلسة عادية 6">جلسة عادية 6</option>
+                <option value="جلسة عادية 7">جلسة عادية 7</option>
+                <option value="جلسة عادية 8">جلسة عادية 8</option>
+                <option value="جلسة عادية 9">جلسة عادية 9</option>
+                <option value="جلسة عادية 10">جلسة عادية 10</option>
+                <option value="جلسة عادية 11">جلسة عادية 11</option>
+                <option value="جلسة عادية 12">جلسة عادية 12</option>
+                <option value="جلسة عادية 13">جلسة عادية 13</option>
+                <option value="جلسة عادية 14">جلسة عادية 14</option>
+                <option value="جلسة عادية 15">جلسة عادية 15</option>
+                <option value="جلسة عادية 16">جلسة عادية 16</option>
+                <option value="جلسة عادية 17">جلسة عادية 17</option>
+                <option value="جلسة عادية 18">جلسة عادية 18</option>
+                <option value="جلسة عادية 19">جلسة عادية 19</option>
+                <option value="جلسة عادية 20">جلسة عادية 20</option>
+            </optgroup>
+            <!-- الجلسات الخاصة -->
+            <optgroup label="جلسات خاصة">
+                <option value="جلسة خاصة 1">جلسة خاصة 1</option>
+                <option value="جلسة خاصة 2">جلسة خاصة 2</option>
+                <option value="جلسة خاصة 3">جلسة خاصة 3</option>
+            </optgroup>
         </select><br>
         <label for="minutes">عدد الدقائق:</label>
         <input type="number" id="minutes" required><br>
@@ -103,12 +118,17 @@
                 <th>اسم الجلسة</th>
                 <th>عدد الدقائق</th>
                 <th>اسم الحاجز</th>
+                <th>الوقت المتبقي</th>
+                <th>إجراءات</th>
             </tr>
         </thead>
         <tbody>
             <!-- الصفوف سيتم إضافتها هنا بواسطة JavaScript -->
         </tbody>
     </table>
+    <h2>الجلسات المنتهية والجلسات الملغية</h2>
+    <div id="sessionEnded"></div>
+    <div id="sessionCanceled"></div>
     <audio id="notificationSound" src="notification.mp3"></audio>
     <script src="script.js"></script>
 </body>
