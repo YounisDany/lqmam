@@ -14,10 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = document.getElementById('minutes').value;
         const reserverName = document.getElementById('reserverName').value;
 
-        if (isSessionBooked(sessionName)) {
-            alert(`الجلسة ${sessionName} محجوزة حاليًا ولا يمكن حجزها مرة أخرى حتى ينتهي وقتها.`);
-            return;
-        }
+    
 
         const endTime = Date.now() + minutes * 60000;
         const session = { sessionType, sessionName, minutes, reserverName, endTime, status: 'active' };
@@ -117,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.lang = 'ar-SA';
         window.speechSynthesis.speak(msg);
     }
+        if (isSessionBooked(sessionName)) {
+            alert(`الجلسة ${sessionName} محجوزة حاليًا ولا يمكن حجزها مرة أخرى حتى ينتهي وقتها.`);
+            return;
+        }
 
     function loadSessions() {
         sessions.forEach(session => {
